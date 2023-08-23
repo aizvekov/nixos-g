@@ -82,8 +82,8 @@ documentation = {
 #   { device = "/swapfile"; size = 4096; }
 #  ];
 
-   virtualisation.virtualbox.host.enable = true;
-   users.extraGroups.vboxusers.members = [ "ai" ];
+ #  virtualisation.virtualbox.host.enable = true;
+ #  users.extraGroups.vboxusers.members = [ "ai" ];
 
 
 programs.dconf.enable = true;
