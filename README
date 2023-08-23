@@ -1,0 +1,45 @@
+parted /dev/sda – mklabel gpt
+
+parted /dev/sda – mkpart ESP fat32 1MiB 512MiB
+
+parted /dev/sda – set 1 boot on
+
+parted /dev/sda – mkpart primary 512MiB 100%
+
+mkfs.fat -F32 /dev/sda1
+
+mkfs.btrfs -f /dev/sda2
+
+mount /dev/sda2 /mnt
+
+btrfs subvolume create /mnt/@root
+
+btrfs subvolume create /mnt/@home
+
+umount /mnt
+
+mount -o subvol=@root,compress=zstd,autodefrag /dev/sda2 /mnt
+
+mkdir /mnt/home
+
+mkdir /mnt/boot
+
+mount -o subvol=@home,compress=zstd,autodefrag /dev/sda2 /mnt/home
+
+mount /dev/sda1 /mnt/boot
+
+nix-env -iA nixos.git
+
+git clone https://github.com/aizvekov/nixos-g.git /mnt/etc/nixos/
+
+nixos-generate-config –root /mnt
+
+nix-channel –add https://nixos.org/channels/nixos-unstable nixos
+
+nix-channel –update
+
+nixos-install –no-root-passwd –root /mnt
+
+sudo nixos-enter –root /mnt -c ‘passwd ai’
+
+sudo umount -R /mnt
