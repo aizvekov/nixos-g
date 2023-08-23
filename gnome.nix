@@ -17,11 +17,11 @@ environment.gnome.excludePackages =
 [
        pkgs.baobab
        pkgs.gnome.cheese
-#       pkgs.epiphany
+       pkgs.epiphany
        pkgs.gnome.gnome-clocks
-#       pkgs.gnome.gnome-contacts
+       pkgs.gnome.gnome-contacts
        pkgs.gnome.gnome-maps
-#       pkgs.gnome-photos
+       pkgs.gnome-photos
        pkgs.gnome.gnome-software
        pkgs.gnome.simple-scan
        pkgs.gnome.yelp
