@@ -12,7 +12,7 @@
 	./u-dirs.nix
 #      ./sync.nix
       ./pipewire.nix
-	./fonts.nix
+#	./fonts.nix
 	./cursor.nix
       ./zsh.nix
 #	./gtk.nix
