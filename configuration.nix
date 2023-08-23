@@ -90,7 +90,7 @@ programs.dconf.enable = true;
 services.printing.enable = false;
 programs.adb.enable = true;
 services.openssh.enable = true;
-#system.stateVersion = "23.05";
+system.stateVersion = "23.05";
 
  }
 
