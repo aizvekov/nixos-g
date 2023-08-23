@@ -1,3 +1,5 @@
+sudo -i
+
 parted /dev/sda – mklabel gpt
 
 parted /dev/sda – mkpart ESP fat32 1MiB 512MiB
@@ -32,14 +34,14 @@ nix-env -iA nixos.git
 
 git clone https://github.com/aizvekov/nixos-g.git /mnt/etc/nixos/
 
-nixos-generate-config –root /mnt
+nixos-generate-config —root /mnt
 
-nix-channel –add https://nixos.org/channels/nixos-unstable nixos
+nix-channel –-add https://nixos.org/channels/nixos-unstable nixos
 
-nix-channel –update
+nix-channel –-update
 
-nixos-install –no-root-passwd –root /mnt
+nixos-install –-no-root-passwd –-root /mnt
 
-sudo nixos-enter –root /mnt -c ‘passwd ai’
+#sudo nixos-enter –-root /mnt -c ‘passwd ai’
 
 sudo umount -R /mnt
