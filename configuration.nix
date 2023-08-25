@@ -85,6 +85,8 @@ documentation = {
  #  virtualisation.virtualbox.host.enable = true;
  #  users.extraGroups.vboxusers.members = [ "ai" ];
 
+systemd.services."getty@tty1".enable = false;
+systemd.services."autovt@tty1".enable = false;
 
 programs.dconf.enable = true;
 services.printing.enable = false;
