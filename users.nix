@@ -15,7 +15,8 @@
         packages = with pkgs ; [
 	mc
 	btrbk
-	syncthing
+        appimage-run
+	#syncthing
 	inetutils
 	exiftool
         ];
