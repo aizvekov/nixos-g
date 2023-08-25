@@ -12,7 +12,9 @@
   programs.gpg.enable = true;
   programs.htop.enable = true;
   home.packages = with pkgs;[
+    keepassxc
     vivaldi
+    vivaldi-ffmpeg-codecs
     doublecmd
     transmission-gtk
     android-tools
@@ -22,7 +24,7 @@
     obs-studio
     scribus
     tdesktop
-    mpv
+#    mpv
 #    handbrake
     meld
     exa
