@@ -10,7 +10,7 @@
       ./users.nix
 	./gnome.nix
 	./u-dirs.nix
-      ./sync.nix
+#      ./sync.nix
       ./pipewire.nix
 #	./fonts.nix
 	./cursor.nix
