@@ -15,6 +15,7 @@
     keepassxc
     vivaldi
     vivaldi-ffmpeg-codecs
+    joplin-desktop
     doublecmd
     transmission-gtk
     android-tools
