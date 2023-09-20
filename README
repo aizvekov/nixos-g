@@ -20,13 +20,13 @@ btrfs subvolume create /mnt/@home
 
 umount /mnt
 
-mount -o subvol=@root,compress=zstd,autodefrag /dev/sda2 /mnt
+mount -o subvol=@root,compress=zstd,autodefrag,discard=async /dev/sda2 /mnt
 
 mkdir /mnt/home
 
 mkdir /mnt/boot
 
-mount -o subvol=@home,compress=zstd,autodefrag /dev/sda2 /mnt/home
+mount -o subvol=@home,compress=zstd,autodefrag,discard=async /dev/sda2 /mnt/home
 
 mount /dev/sda1 /mnt/boot
 
